@@ -7,9 +7,7 @@ const App = () => {
   return (
     <div>
       <Navigation />
-      <div className="container">
-        <h1>Hola mundo</h1>
-      </div>
+      <div className="container"></div>
       <Footer />
     </div>
   );
