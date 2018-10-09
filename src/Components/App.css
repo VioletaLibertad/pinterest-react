@@ -1,28 +1,94 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #211922;
+  font-size: 12px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* Navbar Styles */
+.bg-custom {
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  position: sticky;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.icon-pinterest {
+  height: 46px;
+  width: 46px;
+  padding: 7px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.icon-pinterest:hover {
+  background-color: #efefef;
+  border-radius: 50%;
 }
 
-.App-intro {
-  font-size: large;
+.search-header {
+  width: 631px;
+  background-color: #efefef;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  float: left;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.fa-search {
+  color: #8e8e8e;
+  font-size: 20px;
+}
+
+.searchBox {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  color: #8e8e8e;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-header {
+  margin: 0;
+  padding: 8px;
+  background-color: transparent;
+  color: #717171;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  float: right;
+}
+
+.btn-header:hover {
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: #717171;
+}
+
+.icon-header {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#home-btn {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .icon-pinterest {
+    display: none;
+  }
+
+  .btn-header {
+    display: none;
+  }
+
+  .icon-header {
+    display: none;
+  }
+
+  .search-header {
+    max-width: fit-content;
+  }
 }
