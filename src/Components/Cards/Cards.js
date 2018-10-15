@@ -12,3 +12,9 @@ const Cards = (props) => {
 };
 
 export default Cards;
+
+/*
+  <div key={pic.results}>
+            <img src={pic.previewURL} alt={pic.tags} />
+          </div>
+*/

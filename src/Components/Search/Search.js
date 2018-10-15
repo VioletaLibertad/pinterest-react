@@ -6,8 +6,8 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      valueToSearch: this.props.valueToSearch,
-      pictures: [],
+      valueToSearch: "", 
+      pictures: []
     };
   }
 
@@ -17,26 +17,33 @@ class Search extends Component {
     fetch(apiUrl)
     .then(response => response.json())
     .then(imgData => {
-      let pictures = imgData.hits.map((pic) => {
-        return(
-          <div key={pic.results}>
-            <img src={pic.previewURL} alt={pic.tags} />
-          </div>
-        )
-      });
+      let pictures = imgData.hits;
       this.setState({pictures: pictures});
       console.log("state", this.state.pictures);
     })
 
   }
 
-  render() {
-    return (
-      <div>Holo</div>
-    );
-
+  fetchUserInput(event) {
+    this.setState({
+      valueToSearch: event.target.value
+    }); 
+    console.log(this.state.valueToSearch);
+    this.componentDidMount();
   }
 
+  render() {
+    return (
+      <div>
+        <form href="javascript:void(0)" className="form-inline search-header my-2 my-lg-0 mx-3">
+          <span id="search-btn" className="search-icon-header px-3">
+            <i className="fas fa-search" />
+          </span>
+          <input value={this.state.valueToSearch} onChange={event => this.fetchUserInput(event)} id="search-input" className="form-control search-box mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        </form>
+      </div>
+    );
+  }
 }
 
 export default Search;
