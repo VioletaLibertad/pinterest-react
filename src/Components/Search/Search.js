@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Cards from '../Cards/Cards';
+import Cards from './Cards/Cards';
 import '../App.css';
 
 class Search extends Component {
@@ -41,6 +41,7 @@ class Search extends Component {
           </span>
           <input value={this.state.valueToSearch} onChange={event => this.fetchUserInput(event)} id="search-input" className="form-control search-box mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
         </form>
+        <Cards pictures={(this.state.pictures)} />
       </div>
     );
   }
