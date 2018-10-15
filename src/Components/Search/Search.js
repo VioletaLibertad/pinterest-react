@@ -5,6 +5,10 @@ import '../App.css';
 class Search extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      valueToSearch: this.props.valueToSearch,
+      pictures: [],
+    };
   }
 
   componentDidMount() {
@@ -24,12 +28,6 @@ class Search extends Component {
       console.log("state", this.state.pictures);
     })
 
-  }
-  
-  fetchUserInput(event) {
-    this.valueToSearch = event.target.value;
-    console.log(this.state.valueToSearch);
-    this.componentDidMount();
   }
 
   render() {
