@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './img/logo.png';
-import Search from './Search/Search';
 import './App.css';
 
 const Navigation = () => {
@@ -11,7 +10,14 @@ const Navigation = () => {
         <img className="icon-pinterest" src={logo} width="30" height="30" alt="icon-pinterest" />
       </button>
       {/* Search Input */} 
-      <Search />
+      <div>
+        <form href="javascript:void(0)" className="form-inline search-header my-2 my-lg-0 mx-3">
+          <span id="search-btn" className="search-icon-header px-3">
+            <i className="fas fa-search" />
+          </span>
+          <input onChange={this.fetchUserInput} id="search-input" className="form-control search-box mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        </form>
+      </div>
       {/* Navbar buttons */} 
       <button className="btn-header px-3" id="home-btn" type="button">Home</button>
       <button className="btn-header px-3" type="button">Following</button>
